@@ -3,10 +3,10 @@ package com.spring_boot.mongodb.SpringBoot_MongoDB.Pojo;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collation = "item")
+@Document(collection = "item")
 public class Item {
     @Id
-    private int id;
+    private String id;
     private String title;
     private String desc;
     private float price;
@@ -17,6 +17,14 @@ public class Item {
     }
 
     //Setter and getter
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
